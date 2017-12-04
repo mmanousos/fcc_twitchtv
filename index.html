@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Twitch TV Streaming</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- bootstrap 4--> 
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+        
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+        
+        <link rel="stylesheet" type="text/css" href="style.css" />
+    </head>
+    <body id="body" class="body-style">
+        <section>
+            <div class="jumbo container-fluid img-responsive center-block">
+                <div class="row title-row">
+                    <div class="offset-sm-3 col-sm-6">
+                        <h1 class="title">Twitch TV Streaming</h1>
+                    </div>
+                </div>
+                
+                <div class="row main-row">
+                    
+                        
+                    <div class="col-sm-3 offset-sm-3 streamer"><p><a href="https://www.twitch.tv/freecodecamp" target="_blank">freeCodeCamp</a> <img class='icon'  src='https://static-cdn.jtvnw.net/jtv_user_pictures/freecodecamp-profile_image-d9514f2df0962329-70x70.png' alt='streamer icon'></p></div>
+                    <div class="col-sm-5 offset-sm-1 streamer-status"><span class='status'>offline</span></div>       
+                    
+                    <div class="col-sm-3 offset-sm-3 streamer"><p><a href="https://www.twitch.tv/esl_sc2" target="_blank">ESL_SC2</a> <img class='icon'  src='https://static-cdn.jtvnw.net/jtv_user_pictures/esl_sc2-profile_image-d6db9488cec97125-70x70.jpeg' alt='streamer icon'></p></div> 
+                    <div class="col-sm-5 offset-sm-1 streamer-status"><span class='status'>offline</span></div> 
+
+                    <div class="col-sm-3 offset-sm-3 streamer"><p><a href="https://www.twitch.tv/OgamingSC2" target="_blank">OgamingSC2</a> <img class='icon'  src='https://static-cdn.jtvnw.net/jtv_user_pictures/ogamingsc2-profile_image-9021dccf9399929e-70x70.jpeg' alt='streamer icon'></p></div> 
+                    <div class="col-sm-5 offset-sm-1 streamer-status"><span class='status'>offline</span></div>  
+
+                    <div class="col-sm-3 offset-sm-3 streamer"><p><a href="https://www.twitch.tv/cretetion" target="_blank">cretetion</a> <img class='icon'  src='https://static-cdn.jtvnw.net/jtv_user_pictures/cretetion-profile_image-12bae34d9765f222-70x70.jpeg' alt='streamer icon'> </p></div>
+                    <div class="col-sm-5 offset-sm-1 streamer-status"><span class='status'>offline</span></div>  
+
+                    <div class="col-sm-3 offset-sm-3 streamer"><p><a href="https://www.twitch.tv/storbeck" target="_blank">storbeck</a> <img class='icon'  src='https://static-cdn.jtvnw.net/user-default-pictures/49988c7b-57bc-4dee-bd4f-6df4ad215d3a-profile_image-70x70.jpg' alt='streamer icon'> </p></div>
+                    <div class="col-sm-5 offset-sm-1 streamer-status"><span class='status'>offline</span></div>
+
+                    <div class="col-sm-3 offset-sm-3 streamer"><p><a href="https://www.twitch.tv/habathcx" target="_blank">habathcx</a> <img class='icon'  src='https://static-cdn.jtvnw.net/jtv_user_pictures/habathcx-profile_image-d75385dbe4f42a66-70x70.jpeg' alt='streamer icon'> </p></div>
+                    <div class="col-sm-5 offset-sm-1 streamer-status"><span class='status'>offline</span></div>
+
+                    <div class="col-sm-3 offset-sm-3 streamer"><p><a href="https://www.twitch.tv/RobotCaleb" target="_blank">RobotCaleb</a> <img class='icon'  src='https://static-cdn.jtvnw.net/jtv_user_pictures/robotcaleb-profile_image-9422645f2f0f093c-70x70.png' alt='streamer icon'> </p></div>
+                    <div class="col-sm-5 offset-sm-1 streamer-status"><span class='status'>offline</span></div>
+
+                    <div class="col-sm-3 offset-sm-3 streamer"><p><a href="https://www.twitch.tv/noobs2ninjas" target="_blank">noobs2ninjas</a> <img class='icon'  src='https://static-cdn.jtvnw.net/jtv_user_pictures/noobs2ninjas-profile_image-34707f847a73d934-70x70.png' alt='streamer icon'> </p></div>
+                    <div class="col-sm-5 offset-sm-1 streamer-status"><span class='status'>offline</span></div>
+                </div>                                                 
+                        
+                        ["ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas"]
+            
+                   
+                      
+                
+                <div class="row twitch-stream">
+                    <div class="col-sm-12">
+                        <iframe id="frame" src="" frameborder="0"  border="0" cellspacing="0" style="border" style=none width="100%" height="400">
+                        </iframe>
+                    </div> 
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-6 offset-md-3 credit">
+                        <p>A <a href="http://www.freecodecamp.org">freeCodeCamp</a> project by <a href="http://www.melissa.manousos.com" target="_blank">M. Manousos</a></p> 
+                    </div>    
+                </div>
+            </div>
+        </section>
+        
+        
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+        
+        <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+        <script src="script.js"></script>
+    </body>
+</html>

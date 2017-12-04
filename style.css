@@ -1,0 +1,30 @@
+html, 
+body {
+    background-color: #eee;
+}
+
+.title-row {
+    border: 2px solid #000;
+    background-color: #BF607B;
+}
+
+
+.main-row {
+    border: 2px solid #000;
+    padding-top: 15px;
+    background-color: #a0a8ba;
+}
+
+.icon {
+    border-radius: 50%;
+    width: 45px;
+}
+
+a:link,
+a:active {
+    color: #73132E;
+}
+
+.streamer-status {
+    padding-top: 10px;
+}
