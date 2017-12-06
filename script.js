@@ -28,7 +28,7 @@ $(document).ready(function() {
                     var statusDisplay = ''; // create a string for the status
                     statusDisplay += "Now streaming <a class='live' href='" + link + "' target='_blank'>" + game + " - " + stream + "</a>"; // fill the string with the link, game and stream
                     
-                    var display = "<div class='row'><div class='offset-sm-1 col-sm-10'><div class='row active'><div class='col-sm-3 offset-sm-3 streamer'><p>" + nameLink + " <img class='icon' src='" + image + "' alt='streamer icon'></p></div><div class='col-sm-5 offset-sm-1 streamer-status'><span class='status'>" + statusDisplay + "</span></div></div></div></div>";
+                    var display = "<div class='row'><div class='offset-sm-1 col-sm-10'><div class='row live'><div class='col-sm-3 offset-sm-3 streamer'><p>" + nameLink + " <img class='icon' src='" + image + "' alt='streamer icon'></p></div><div class='col-sm-6 streamer-status'><span class='status'>" + statusDisplay + "</span></div></div></div></div>";
                     $('.display-box').append(display);
                 };
                 
@@ -40,7 +40,7 @@ $(document).ready(function() {
 
                     var statusDisplay = name + " is currently offline.";
                     
-                    var display = "<div class='row'><div class='offset-sm-1 col-sm-10'><div class='row inactive'><div class='col-sm-3 offset-sm-3 streamer'><p>" + nameLink + "</p></div><div class='col-sm-5 offset-sm-1 streamer-status'><span class='status offline'>" + statusDisplay + "</span></div></div></div></div>";             
+                    var display = "<div class='row'><div class='offset-sm-1 col-sm-10'><div class='row inactive'><div class='col-sm-3 offset-sm-3 streamer'><p>" + nameLink + "</p></div><div class='col-sm-6 streamer-status'><span class='status offline'>" + statusDisplay + "</span></div></div></div></div>";             
                     $('.display-box').append(display);        
                 };
    
@@ -52,7 +52,16 @@ $(document).ready(function() {
             });    
         }
     }
-    
     getStream();
+    
+    // click all-btn: displays all (removes '.hidden' class) & dims text of all-btn
+    // click live-btn: hides ".inactive" & dims text of live-btn
+    // click offline-btn: hides ".active" & dims text of offline-btn
+    
+    $('#all-btn').on("click", function(){
+        $('.active')
+    });
+    
+    
     
 });

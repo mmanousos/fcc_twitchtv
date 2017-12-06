@@ -17,11 +17,12 @@ a:visited {
 }
 
 .btn {
+    background-color: #993350;
     color: #E699AF;
     margin-bottom: 8px;
 }
 
-.row.active, 
+.row.live, 
 .row.inactive {
     border-bottom: 1px solid #838383;
     border-left: 2px solid #000;
@@ -41,19 +42,23 @@ a:visited {
     line-height: 150%;
 }
 
+.live .streamer-status {
+    padding-top: 5px;   
+}
+
 .icon {
     border-radius: 50%;
     width: 45px;
     padding-top: -20px;
 }
 
-.active {
+.live {
     background-color: #993350;
     height: auto;
-    padding-top: 10px;
+    padding-top: 5px;
 }
 
-.active a {
+.live a {
     color: #E699AF;
 }
 
