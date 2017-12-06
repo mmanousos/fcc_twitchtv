@@ -16,6 +16,11 @@ a:visited {
     color: #73132E;
 }
 
+.btn {
+    color: #E699AF;
+    margin-bottom: 8px;
+}
+
 .row.active, 
 .row.inactive {
     border-bottom: 1px solid #838383;
