@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
     
-    var streamers = ["freecodecamp", "ESL_SC2", "OgamingSC2", "cretetion", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas"];
+    var streamers = ["freecodecamp", "ESL_SC2", "OgamingSC2", "cretetion", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas", "Faker", "pokimane"];
 
     
     // check if first stream is live
@@ -9,7 +9,7 @@ $(document).ready(function() {
         // no, move on to next streamer
 
     function getStream() {
-        for (var i = 0; i<8; i++) {
+        for (var i = 0; i<10; i++) {
             var url = 'https://wind-bow.gomix.me/twitch-api/streams/' + streamers[i] + '?callback=?';
             
             $.getJSON(url, function(data) { // access API
