@@ -28,7 +28,7 @@ $(document).ready(function() {
                     var statusDisplay = ''; // create a string for the status
                     statusDisplay += "Now streaming <a class='live' href='" + link + "' target='_blank'>" + game + " - " + stream + "</a>"; // fill the string with the link, game and stream
                     
-                    var display = "<div class='row'><div class='offset-sm-1 col-sm-10'><div class='row live'><div class='col-sm-3 offset-sm-3 streamer'><p>" + nameLink + " <img class='icon' src='" + image + "' alt='streamer icon'></p></div><div class='col-sm-6 streamer-status'><span class='status'>" + statusDisplay + "</span></div></div></div></div>";
+                    var display = "<div class='row streamer-active'><div class='offset-sm-1 col-sm-10'><div class='row live'><div class='col-sm-3 offset-sm-3 streamer'><p>" + nameLink + " <img class='icon' src='" + image + "' alt='streamer icon'></p></div><div class='col-sm-6 streamer-status'><span class='status'>" + statusDisplay + "</span></div></div></div></div>";
                     $('.display-box').append(display);
                 };
                 
@@ -40,7 +40,7 @@ $(document).ready(function() {
 
                     var statusDisplay = name + " is currently offline.";
                     
-                    var display = "<div class='row'><div class='offset-sm-1 col-sm-10'><div class='row inactive'><div class='col-sm-3 offset-sm-3 streamer'><p>" + nameLink + "</p></div><div class='col-sm-6 streamer-status'><span class='status offline'>" + statusDisplay + "</span></div></div></div></div>";             
+                    var display = "<div class='row streamer-inactive'><div class='offset-sm-1 col-sm-10'><div class='row inactive'><div class='col-sm-3 offset-sm-3 streamer'><p>" + nameLink + "</p></div><div class='col-sm-6 streamer-status'><span class='status offline'>" + statusDisplay + "</span></div></div></div></div>";             
                     $('.display-box').append(display);        
                 };
    
@@ -58,8 +58,41 @@ $(document).ready(function() {
     // click live-btn: hides ".inactive" & dims text of live-btn
     // click offline-btn: hides ".active" & dims text of offline-btn
     
-    $('#all-btn').on("click", function(){
+   /* $('#all-btn').on("click", function(){
         $('.active')
+    }); */
+    
+    $('#live-btn').on('click', function() {
+        $('.streamer-inactive').addClass('hidden'); 
+        $('#live-btn').addClass('dim');   
+        if ($('.streamer-active').hasClass('hidden')) {
+            $('.streamer-active').removeClass('hidden');  
+            $('#offline-btn').removeClass('dim');    
+        }; 
+    });
+    
+    $('#offline-btn').on('click', function() {
+        $('.streamer-active').addClass('hidden'); 
+        $('#offline-btn').addClass('dim'); 
+        if ($('.streamer-inactive').hasClass('hidden')) {
+            $('.streamer-inactive').removeClass('hidden');  
+            $('#live-btn').removeClass('dim');    
+        }; 
+    });
+    
+    $('#all-btn').on('click', function() {
+        if ($('.streamer-inactive').hasClass('hidden')) {
+            $('.streamer-inactive').removeClass('hidden');
+        };
+        if ($('#offline-btn').hasClass('dim')) {
+            $('#offline-btn').removeClass('dim');
+        };
+        if ($('.streamer-active').hasClass('hidden')) {
+            $('.streamer-active').removeClass('hidden');      
+        };
+        if ($('#live-btn').hasClass('dim')) {            
+            $('#live-btn').removeClass('dim');    
+        }; 
     });
     
     

@@ -22,6 +22,10 @@ a:visited {
     margin-bottom: 8px;
 }
 
+.dim {
+    color: #BF607B;
+}
+
 .row.live, 
 .row.inactive {
     border-bottom: 1px solid #838383;
@@ -71,6 +75,10 @@ a:visited {
 .credit {
     padding-top: 10px;
     border-top: 2px solid #000;
+}
+
+.hidden {
+    display: none;
 }
 
 /* color pallete: http://paletton.com/#uid=15q0u0kllllaFw0g0qFqFg0w0aF */ 
